@@ -127,7 +127,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "$HOME/.cargo/env"
 export PATH="/usr/local/neovim/nvim-linux-x86_64/bin:$PATH"
-export PATH="/usr/local/neovim/nvim-linux-x86_64/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 
 eval "$(starship init bash)"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(zoxide init bash)"
+

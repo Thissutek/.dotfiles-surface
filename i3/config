@@ -60,11 +60,14 @@ bindsym $mod+Shift+x exec i3lock -c 1d2021
 # rofi-wifi-menu
 bindsym $mod+Shift+w exec --no-startup-id rofi-wifi-menu.sh
 
+# rofi-bluetooth
+bindsym $mod+b exec --no-startup-id rofi-bluetooth
+
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id rofi -show drun
-
-
+# lazygit
+bindsym $mod+g exec --no-startup-id gnome-terminal -- lazygit
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -197,6 +200,8 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 # nitrogen wallpaper
 exec --no-startup-id nitrogen --restore
 
